@@ -1,8 +1,8 @@
 import React from 'react'
-import { Col, Row } from 'antd';
+import { Col } from 'antd';
 import { WrapperHeader,WrapperTextHeader } from './style';
-import { Input } from 'antd';
-const { Search } = Input;
+import Search from 'antd/lib/input/Search';
+
 const HeaderComponent = () => {
   return (
     <div>
@@ -11,9 +11,9 @@ const HeaderComponent = () => {
         <Col span={12}>
           <Search
           placeholder='input search text'
+          enterButton
           allowClear
-          enterButton='Search'
-          size='large'/>
+          />
         </Col>
         <Col span={6}>col-8</Col>
     </WrapperHeader>
