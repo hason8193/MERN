@@ -1,12 +1,17 @@
 import React from 'react'
 import { Col } from 'antd';
-import { WrapperHeader,WrapperTextHeader } from './style';
+import { WrapperHeader,WrapperTextHeader,WrapperHeaderAccount,WrapperTextHeaderSmall } from './style';
 import Search from 'antd/lib/input/Search';
+import {
+  UserOutlined,
+  CaretDownOutlined,
+  ShoppingCartOutlined
+} from '@ant-design/icons';
 
 const HeaderComponent = () => {
   return (
     <div>
-    <WrapperHeader>
+    <WrapperHeader gutter={16}>
         <Col span={6}><WrapperTextHeader>HASON</WrapperTextHeader></Col>
         <Col span={12}>
           <Search
@@ -15,7 +20,23 @@ const HeaderComponent = () => {
           allowClear
           />
         </Col>
-        <Col span={6}>col-8</Col>
+        <Col span={6} style={{display:'flex',gap:'20px'}}>
+          <WrapperHeaderAccount>
+          <UserOutlined style={{fontSize:'30px'}} />
+          <div>
+            <WrapperTextHeaderSmall>Sign in/Sign up</WrapperTextHeaderSmall>
+            <div>
+              <WrapperTextHeaderSmall>User</WrapperTextHeaderSmall>
+              <CaretDownOutlined />
+            </div>
+          </div>
+          </WrapperHeaderAccount>
+          <div>
+            <ShoppingCartOutlined style={{fontSize:'30px',color:'#fff'}} />
+            <WrapperTextHeaderSmall>Cart</WrapperTextHeaderSmall>
+          </div>
+          
+          </Col>
     </WrapperHeader>
     </div>
   )
