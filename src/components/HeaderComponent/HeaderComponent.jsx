@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'antd';
 import { WrapperHeader,WrapperTextHeader,WrapperHeaderAccount,WrapperTextHeaderSmall } from './style';
-import Search from 'antd/lib/input/Search';
+import  ButtonInputSearch  from '../ButtonInputSearch/ButtonInputSearch';
 import {
   UserOutlined,
   CaretDownOutlined,
@@ -14,10 +14,11 @@ const HeaderComponent = () => {
     <WrapperHeader gutter={16}>
         <Col span={6}><WrapperTextHeader>HASON</WrapperTextHeader></Col>
         <Col span={12}>
-          <Search
+          <ButtonInputSearch
+          bordered={false}
+          size='large'
+          textButton='Search'
           placeholder='input search text'
-          enterButton
-          allowClear
           />
         </Col>
         <Col span={6} style={{display:'flex',gap:'20px'}}>
