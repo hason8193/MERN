@@ -21,7 +21,7 @@ const HeaderComponent = () => {
           placeholder='input search text'
           />
         </Col>
-        <Col span={6} style={{display:'flex',gap:'20px'}}>
+        <Col span={6} style={{display:'flex',gap:'20px',alignItems:'center'}}>
           <WrapperHeaderAccount>
           <UserOutlined style={{fontSize:'30px'}} />
           <div>
