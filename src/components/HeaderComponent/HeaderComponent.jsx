@@ -11,7 +11,7 @@ import {
 const HeaderComponent = () => {
   return (
     <div>
-    <WrapperHeader gutter={16}>
+    <WrapperHeader>
         <Col span={6}><WrapperTextHeader>HASON</WrapperTextHeader></Col>
         <Col span={12}>
           <ButtonInputSearch
