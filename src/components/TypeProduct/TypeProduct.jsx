@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const TypeProduct = ({name}) => {
-  return (
-    <div>{name}</div>
-  )
-}
+const TypeProduct = ({ name }) => {
+  return <div>{name}</div>;
+};
 
-export default TypeProduct
+export default TypeProduct;
