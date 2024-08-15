@@ -15,3 +15,12 @@ export const WrapperContent=styled.div`
     // align-items: center;
     flex-direction: column;
     gap:12px;`
+
+export const WrapperPrice = styled.div`
+    borderRadius: "10px";
+    display: "flex";
+    padding: "4px";
+    backgroundColor: "rgb(238, 238, 238)";
+    color: "rgb(56,56,61)";
+    width: "fit-content";
+    `

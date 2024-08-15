@@ -8,6 +8,7 @@ import slider3 from "../../assets/images/slider3.webp";
 import slider4 from "../../assets/images/slider4.webp";
 import CardComponent from "../../components/CardComponent/CardComponent";
 import NavBarComponent from "../../components/NavbarComponent/NavBarComponent";
+import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 const HomePage = () => {
   const arr = [
     "TV",
@@ -48,8 +49,13 @@ const HomePage = () => {
           }}
         >
           <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
         </div>
-        <NavBarComponent />
+        <ButtonComponent />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "antd";
-const ButonComponent = ({
+const ButtonComponent = ({
   size,
   styleButton,
   styleTextButton,
@@ -21,4 +21,4 @@ const ButonComponent = ({
   );
 };
 
-export default ButonComponent;
+export default ButtonComponent;
