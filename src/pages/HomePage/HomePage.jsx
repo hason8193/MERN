@@ -1,6 +1,6 @@
 import React from "react";
 import TypeProduct from "../../components/TypeProduct/TypeProduct";
-import { WrapperTypeProduct } from "./style";
+import { WrapperButtonMore, WrapperTypeProduct } from "./style";
 import SliderComponent from "../../components/SliderComponent/SliderComponent";
 import slider1 from "../../assets/images/slider1.webp";
 import slider2 from "../../assets/images/slider2.webp";
@@ -46,6 +46,8 @@ const HomePage = () => {
             display: "flex",
             alignItems: "center",
             gap: "20px",
+            width: "100%",
+            flexWrap: "wrap",
           }}
         >
           <CardComponent />
@@ -55,7 +57,27 @@ const HomePage = () => {
           <CardComponent />
           <CardComponent />
         </div>
-        <ButtonComponent />
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "10px",
+          }}
+        >
+          <WrapperButtonMore
+            textButton="More"
+            type="outline"
+            styleButton={{
+              border: "1px solid rgb(11,116,229)",
+              color: "rgb(11,116,229)",
+              width: "240px",
+              height: "38px",
+              borderRadius: "4px",
+            }}
+            styleTextButton={{ fontWeight: 500 }}
+          />
+        </div>
       </div>
     </>
   );
