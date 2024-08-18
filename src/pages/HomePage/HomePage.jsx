@@ -1,14 +1,17 @@
 import React from "react";
 import TypeProduct from "../../components/TypeProduct/TypeProduct";
-import { WrapperButtonMore, WrapperTypeProduct } from "./style";
+import {
+  WrapperButtonMore,
+  WrapperProducts,
+  WrapperTypeProduct,
+} from "./style";
 import SliderComponent from "../../components/SliderComponent/SliderComponent";
 import slider1 from "../../assets/images/slider1.webp";
 import slider2 from "../../assets/images/slider2.webp";
 import slider3 from "../../assets/images/slider3.webp";
 import slider4 from "../../assets/images/slider4.webp";
 import CardComponent from "../../components/CardComponent/CardComponent";
-import NavBarComponent from "../../components/NavbarComponent/NavBarComponent";
-import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
+
 const HomePage = () => {
   const arr = [
     "TV",
@@ -40,23 +43,17 @@ const HomePage = () => {
         }}
       >
         <SliderComponent arrImages={[slider1, slider2, slider3, slider4]} />
-        <div
-          style={{
-            marginTop: "20px",
-            display: "flex",
-            alignItems: "center",
-            gap: "20px",
-            width: "100%",
-            flexWrap: "wrap",
-          }}
-        >
+        <WrapperProducts>
           <CardComponent />
           <CardComponent />
           <CardComponent />
           <CardComponent />
           <CardComponent />
           <CardComponent />
-        </div>
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+        </WrapperProducts>
         <div
           style={{
             width: "100%",
