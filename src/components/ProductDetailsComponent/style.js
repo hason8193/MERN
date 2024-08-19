@@ -49,19 +49,21 @@ export const WrapperAddressProduct = styled.div`
         line-height:24px;
         font-weight:500;}`
 
-export const WrapperQualityProduct = styled.h1`
-`
-
-export const WrapperBtnQualityProduct = styled.div`
+export const WrapperQualityProduct = styled.div`
     display:flex;
+    gap:4px;
     align-items:center;
-    margin-top:10px;
-    span{
-        font-size:16px;
-        line-height:24px;
-        font-weight:500;
-        margin-right:10px;}`
+    border-radius:4px;
+    width:100px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    
+    `
+
+
 
 export const WrapperInputNumber = styled(InputNumber)`
     &.ant-input-number ant-input-number-sm{
-        width:40px};`
+        width:40px;
+        border-top:none;
+        border-bottom:none;};`
