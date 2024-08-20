@@ -15,12 +15,19 @@ import {
 
 const HeaderComponent = () => {
   return (
-    <div>
+    <div
+      style={{
+        wdith: "100%",
+        background: "rgb(26,148,255)",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <WrapperHeader>
-        <Col span={6}>
+        <Col span={5}>
           <WrapperTextHeader>HASON</WrapperTextHeader>
         </Col>
-        <Col span={12}>
+        <Col span={13}>
           <ButtonInputSearch
             bordered={false}
             size="large"
@@ -30,7 +37,7 @@ const HeaderComponent = () => {
         </Col>
         <Col
           span={6}
-          style={{ display: "flex", gap: "20px", alignItems: "center" }}
+          style={{ display: "flex", gap: "54px", alignItems: "center" }}
         >
           <WrapperHeaderAccount>
             <UserOutlined style={{ fontSize: "30px" }} />

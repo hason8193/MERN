@@ -42,7 +42,7 @@ const CardComponent = () => {
         <span>| Sold 1000+</span>
       </WrapperReportText>
       <WrapperPriceText>
-        $1000
+        <span style={{ marginRight: "8px" }}>$1000</span>
         <WrapperDiscountText>-5%</WrapperDiscountText>
       </WrapperPriceText>
     </WrapperCardStyle>

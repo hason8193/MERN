@@ -1,10 +1,16 @@
-import React from "react";
-import { WrapperContainerLeft, WrapperContainerRight } from "./style";
+import React, { useState } from "react";
+import {
+  WrapperContainerLeft,
+  WrapperContainerRight,
+  WrapperTextLight,
+} from "./style";
 import InputFormComponent from "../../components/InputFormComponent/InputFormComponent";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import { Image } from "antd";
 import imageLogo from "../../assets/images/logo-signin.png";
+import { EyeFilled, EyeInvisibleFilled } from "@ant-design/icons";
 const SignInPage = () => {
+  const [isShowPassword, setIsShowPassword] = useState(false);
   return (
     <div
       style={{
@@ -26,17 +32,37 @@ const SignInPage = () => {
       >
         <WrapperContainerLeft>
           <h1>Xin chào</h1>
-          <p>Đăng nhập vào tạo tài khoản</p>
-          <InputFormComponent />
+          <p>Đăng nhập và tạo tài khoản</p>
+          <InputFormComponent
+            style={{ marginBottom: "10px" }}
+            placeholder="abc@gmail.com"
+          />
+          <div style={{ position: "relative" }}>
+            <span
+              style={{
+                zIndex: 10,
+                position: "absolute",
+                top: "4px",
+                right: "8px",
+              }}
+            >
+              {isShowPassword ? <EyeFilled /> : <EyeInvisibleFilled />}
+            </span>
+          </div>
+          <InputFormComponent
+            placeholder="password"
+            type={isShowPassword ? "text" : "password"}
+          />
           <ButtonComponent
             size={40}
             styleButton={{
               borderRadius: "0",
               background: "rgb(255, 57, 69)",
               height: "48px",
-              width: "220px",
+              width: "100%",
               border: "none",
               borderRadius: "4px",
+              margin: "26px 0 10px",
             }}
             styleTextButton={{
               color: "#fff",
@@ -45,6 +71,13 @@ const SignInPage = () => {
             }}
             textButton={"Chọn mua"}
           />
+          <p>
+            <WrapperTextLight>Quên mật khẩu</WrapperTextLight>
+          </p>
+          <p>
+            Chưa có tài khoản?{" "}
+            <WrapperTextLight>Tạo tài khoản</WrapperTextLight>
+          </p>
         </WrapperContainerLeft>
         <WrapperContainerRight>
           <div>
