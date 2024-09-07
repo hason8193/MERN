@@ -20,7 +20,7 @@ function App() {
     queryKey: ["todos"],
     queryFn: fetchApi,
   });
-  console.log("query", query);
+  console.log("Query", query);
   return (
     <div>
       <Router>

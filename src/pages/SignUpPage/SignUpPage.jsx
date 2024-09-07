@@ -9,8 +9,13 @@ import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import { Image } from "antd";
 import imageLogo from "../../assets/images/logo-signin.png";
 import { EyeFilled, EyeInvisibleFilled } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 const SignUpPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const handleNavigateSignIn = () => {
+    navigate("/sign-in");
+  };
   return (
     <div
       style={{
@@ -87,8 +92,11 @@ const SignUpPage = () => {
           <p>
             <WrapperTextLight>Quên mật khẩu</WrapperTextLight>
           </p>
-          <p>
-            Bạn đã có tài khoản? <WrapperTextLight>Đăng nhập</WrapperTextLight>
+          <p style={{ marginTop: "0" }}>
+            Bạn đã có tài khoản?{" "}
+            <WrapperTextLight onClick={handleNavigateSignIn}>
+              Đăng nhập
+            </WrapperTextLight>
           </p>
         </WrapperContainerLeft>
         <WrapperContainerRight>
